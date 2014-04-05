@@ -9,6 +9,9 @@ public class TestTodo {
     public static void main(String...x)throws Exception{
         System.out.println("probando usuario");
         
+       for( Usuario u:DAOUsuario.buscarTodos()){
+           System.out.println(u.getLogin());
+       }
         
     }
 }

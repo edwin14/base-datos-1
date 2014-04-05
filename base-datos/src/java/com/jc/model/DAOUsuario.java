@@ -1,19 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package com.jc.model;
 
-/**
- *
- * @author campitos
- */
+
 import java.sql.*;
 import java.util.ArrayList;
 public class DAOUsuario {
-    Conexion con;
+    static Conexion con;
     
     public DAOUsuario(){
         con=new Conexion();
@@ -32,7 +23,7 @@ public class DAOUsuario {
     
  }
     
-    public ArrayList<Usuario> buscarTodos()throws Exception {
+    public  static ArrayList<Usuario> buscarTodos()throws Exception {
        ArrayList<Usuario> usuarios= new ArrayList<Usuario>();
    //Primero  nos concetamos a la base de datos
      Connection conexion = con.conectarse();
